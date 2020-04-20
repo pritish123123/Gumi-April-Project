@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Gumi Vietnam</string>
+    <string name="todo">TODO</string>
+    <string name="email_address">Email Address</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="forgot_your_password">Forgot your Password?</string>
+    <string name="create_account">Create Account</string>
+    <string name="notification_from_company">Notification From Company</string>
+    <string name="take_a_half_day_off">Take a half day off</string>
+    <string name="may">MAY</string>
+    <string name="_26"> 26</string>
+    <string name="sat">SAT</string>
+    <string name="info"> We are going to have a long period of time of remoting at home, so please clean your table and your room, empty out all rubbish before you back home. \nThank you! </string>
+    <string name="image">Image</string>
+    <string name="information">Information</string>
+    <string name="_4_2020">4/2020</string>
+    <string name="time">Time</string>
+</resources>

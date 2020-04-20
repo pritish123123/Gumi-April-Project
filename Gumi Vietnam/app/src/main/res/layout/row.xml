@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="3dp"
+    app:cardElevation="3dp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:id="@+id/notification1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/borders">
+
+        <ImageView
+            android:id="@+id/red"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/email"
+            android:layout_margin="15dp"
+            android:contentDescription="@string/todo" />
+
+        <TextView
+            android:id="@+id/company"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/notification_from_company"
+            android:layout_centerHorizontal="true"
+            android:textSize="18sp"
+            android:layout_toEndOf="@id/red"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/take"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/take_a_half_day_off"
+            android:layout_toEndOf="@id/red"
+            android:layout_below="@id/company"
+            android:textSize="18sp"
+            android:layout_marginBottom="10dp"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
