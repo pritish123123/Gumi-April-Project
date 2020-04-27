@@ -42,9 +42,9 @@ class LoginActivity : AppCompatActivity() {
         }
 
         login.setOnClickListener {
-            val input2 = password.editText?.text
 
             val input = email.editText?.text
+            val input2 = password.editText?.text
 
             if (input != null)
             {
@@ -64,20 +64,13 @@ class LoginActivity : AppCompatActivity() {
                         Toast.LENGTH_SHORT
                     ).show()
                     return@setOnClickListener
-                } else
-                {
-                    val intent = Intent(this@LoginActivity, ShowListActivity::class.java)
-
-                    startActivity(intent)
                 }
             }
 
             if (input2 != null)
             {
-
                 if (input2.isEmpty())
                 {
-
                     Toast.makeText(this@LoginActivity, "Password can't be empty", Toast.LENGTH_LONG)
                         .show()
                     return@setOnClickListener

@@ -12,12 +12,12 @@
         "source": "/Users/sekaiichi/Desktop/git/Gumi Vietnam/app/src/main/res/mipmap-mdpi/ic_launcher.png"
     },
     {
-        "merged": "/Users/sekaiichi/Desktop/git/Gumi Vietnam/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_ic_launcher_background.png.flat",
-        "source": "/Users/sekaiichi/Desktop/git/Gumi Vietnam/app/build/generated/res/pngs/debug/drawable-xxxhdpi/ic_launcher_background.png"
-    },
-    {
         "merged": "/Users/sekaiichi/Desktop/git/Gumi Vietnam/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher.png.flat",
         "source": "/Users/sekaiichi/Desktop/git/Gumi Vietnam/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/sekaiichi/Desktop/git/Gumi Vietnam/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_ic_launcher_background.png.flat",
+        "source": "/Users/sekaiichi/Desktop/git/Gumi Vietnam/app/build/generated/res/pngs/debug/drawable-xxxhdpi/ic_launcher_background.png"
     },
     {
         "merged": "/Users/sekaiichi/Desktop/git/Gumi Vietnam/app/build/intermediates/res/merged/debug/drawable_roundedcorners.xml.flat",

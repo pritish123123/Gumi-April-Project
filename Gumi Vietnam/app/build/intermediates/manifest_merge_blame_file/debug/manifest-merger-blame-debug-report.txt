@@ -28,12 +28,12 @@
 19        android:testOnly="true"
 20        android:theme="@style/Theme.MaterialComponents.Light" >
 20-->/Users/sekaiichi/Desktop/git/Gumi Vietnam/app/src/main/AndroidManifest.xml:12:9-62
-21        <activity android:name="com.example.gumivietnam.InfoActivity" />
-21-->/Users/sekaiichi/Desktop/git/Gumi Vietnam/app/src/main/AndroidManifest.xml:13:9-59
-21-->/Users/sekaiichi/Desktop/git/Gumi Vietnam/app/src/main/AndroidManifest.xml:13:19-47
-22        <activity android:name="com.example.gumivietnam.ShowListActivity" />
-22-->/Users/sekaiichi/Desktop/git/Gumi Vietnam/app/src/main/AndroidManifest.xml:14:9-54
-22-->/Users/sekaiichi/Desktop/git/Gumi Vietnam/app/src/main/AndroidManifest.xml:14:19-51
+21        <activity android:name="com.example.gumivietnam.ShowListActivity" />
+21-->/Users/sekaiichi/Desktop/git/Gumi Vietnam/app/src/main/AndroidManifest.xml:13:9-63
+21-->/Users/sekaiichi/Desktop/git/Gumi Vietnam/app/src/main/AndroidManifest.xml:13:19-51
+22        <activity android:name="com.example.gumivietnam.InfoActivity" />
+22-->/Users/sekaiichi/Desktop/git/Gumi Vietnam/app/src/main/AndroidManifest.xml:14:9-50
+22-->/Users/sekaiichi/Desktop/git/Gumi Vietnam/app/src/main/AndroidManifest.xml:14:19-47
 23        <activity android:name="com.example.gumivietnam.LoginActivity" />
 23-->/Users/sekaiichi/Desktop/git/Gumi Vietnam/app/src/main/AndroidManifest.xml:15:9-51
 23-->/Users/sekaiichi/Desktop/git/Gumi Vietnam/app/src/main/AndroidManifest.xml:15:19-48

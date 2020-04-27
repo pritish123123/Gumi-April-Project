@@ -19,8 +19,8 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.MaterialComponents.Light" >
-        <activity android:name="com.example.gumivietnam.InfoActivity" />
         <activity android:name="com.example.gumivietnam.ShowListActivity" />
+        <activity android:name="com.example.gumivietnam.InfoActivity" />
         <activity android:name="com.example.gumivietnam.LoginActivity" />
         <activity android:name="com.example.gumivietnam.SplashScreenActivity" >
             <intent-filter>

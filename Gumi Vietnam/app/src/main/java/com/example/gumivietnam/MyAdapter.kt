@@ -1,95 +1,40 @@
 package com.example.gumivietnam
 
 import android.content.Context
-import android.content.Intent
+import android.icu.text.CaseMap
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
+import android.widget.AdapterView
+import android.widget.ImageView
+import android.widget.TextView
+import androidx.appcompat.view.menu.ActionMenuItemView
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.row.view.*
 
-class MyAdapter(val arrayList: ArrayList<Model>, val context: Context):
-    RecyclerView.Adapter<MyAdapter.ViewHolder>() {
-
-    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
-
-        fun bindItems(model: Model){
-            itemView.company.text = model.title
-            itemView.take.text = model.des
-            itemView.red.setImageResource(model.image)
+class MyAdapter (
+    private val context: Context,
+    private val model: List<Model>,
+    val listener : (Model) -> Unit
+): RecyclerView.Adapter<MyAdapter.ModelViewHolder>() {
+    class ModelViewHolder(view: View) : RecyclerView.ViewHolder(view){
+        val image = view.findViewById<ImageView>(R.id.red)
+        val title = view.findViewById<TextView>(R.id.company)
+        val descriptor = view.findViewById<TextView>(R.id.take)
+        fun bindView(model: Model, listener: (Model) -> Unit){
+            image.setImageResource(model.image)
+            title.text = model.title
+            descriptor.text = model.descriptor
+            itemView.setOnClickListener { listener(model) }
         }
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ModelViewHolder
+            = ModelViewHolder(LayoutInflater.from(context).inflate(R.layout.row, parent, false))
 
-        val v = LayoutInflater.from(parent.context).inflate(R.layout.row, parent, false)
+    override fun getItemCount(): Int = model.size
 
-        return ViewHolder(v)
-    }
 
-    override fun getItemCount(): Int {
-       return arrayList.size
-    }
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bindItems(arrayList[position])
-
-        holder.itemView.setOnClickListener{
-
-            if (position == 0) {
-
-                Toast.makeText(
-                    context,
-                    "You clicked on Company notification",
-                    Toast.LENGTH_SHORT
-                ).show()
-
-            }
-
-            if (position == 1) {
-
-                Toast.makeText(
-                    context,
-                    "You clicked on position 1",
-                    Toast.LENGTH_SHORT
-                ).show()
-            }
-
-            if (position == 2) {
-
-                Toast.makeText(
-                    context,
-                    "You clicked on position 2",
-                    Toast.LENGTH_SHORT
-                ).show()
-            }
-
-            if (position == 3) {
-
-                Toast.makeText(
-                    context,
-                    "You clicked on position 3",
-                    Toast.LENGTH_SHORT
-                ).show()
-            }
-
-            if (position == 4) {
-
-                Toast.makeText(
-                    context,
-                    "You clicked on position 4",
-                    Toast.LENGTH_SHORT
-                ).show()
-            }
-
-            if (position == 5) {
-
-                Toast.makeText(
-                    context,
-                    "You clicked on position 5",
-                    Toast.LENGTH_SHORT
-                ).show()
-            }
-        }
+    override fun onBindViewHolder(holder: ModelViewHolder, position: Int) {
+        holder.bindView(model [position],listener )
     }
 }

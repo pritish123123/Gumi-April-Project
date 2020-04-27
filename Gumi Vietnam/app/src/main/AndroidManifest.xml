@@ -10,8 +10,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MaterialComponents.Light">
-        <activity android:name=".InfoActivity"></activity>
-        <activity android:name=".ShowListActivity" />
+        <activity android:name=".ShowListActivity"></activity>
+        <activity android:name=".InfoActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".SplashScreenActivity">
             <intent-filter>

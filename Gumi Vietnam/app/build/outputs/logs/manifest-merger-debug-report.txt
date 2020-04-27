@@ -75,14 +75,14 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/seka
 		ADDED from /Users/sekaiichi/Desktop/git/Gumi Vietnam/app/src/main/AndroidManifest.xml:7:9-35
 	android:theme
 		ADDED from /Users/sekaiichi/Desktop/git/Gumi Vietnam/app/src/main/AndroidManifest.xml:12:9-62
-activity#com.example.gumivietnam.InfoActivity
-ADDED from /Users/sekaiichi/Desktop/git/Gumi Vietnam/app/src/main/AndroidManifest.xml:13:9-59
-	android:name
-		ADDED from /Users/sekaiichi/Desktop/git/Gumi Vietnam/app/src/main/AndroidManifest.xml:13:19-47
 activity#com.example.gumivietnam.ShowListActivity
-ADDED from /Users/sekaiichi/Desktop/git/Gumi Vietnam/app/src/main/AndroidManifest.xml:14:9-54
+ADDED from /Users/sekaiichi/Desktop/git/Gumi Vietnam/app/src/main/AndroidManifest.xml:13:9-63
 	android:name
-		ADDED from /Users/sekaiichi/Desktop/git/Gumi Vietnam/app/src/main/AndroidManifest.xml:14:19-51
+		ADDED from /Users/sekaiichi/Desktop/git/Gumi Vietnam/app/src/main/AndroidManifest.xml:13:19-51
+activity#com.example.gumivietnam.InfoActivity
+ADDED from /Users/sekaiichi/Desktop/git/Gumi Vietnam/app/src/main/AndroidManifest.xml:14:9-50
+	android:name
+		ADDED from /Users/sekaiichi/Desktop/git/Gumi Vietnam/app/src/main/AndroidManifest.xml:14:19-47
 activity#com.example.gumivietnam.LoginActivity
 ADDED from /Users/sekaiichi/Desktop/git/Gumi Vietnam/app/src/main/AndroidManifest.xml:15:9-51
 	android:name
