@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+<androidx.cardview.widget.CardView xmlns:tools="http://schemas.android.com/tools"
     app:cardCornerRadius="3dp"
     app:cardElevation="3dp"
     app:cardUseCompatPadding="true"
-    android:id="@+id/row">
+    android:id="@+id/row"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <RelativeLayout
         android:id="@+id/notification1"
@@ -37,7 +38,8 @@
             android:textSize="18sp"
             android:layout_toEndOf="@id/red"
             android:textStyle="bold"
-            android:layout_marginTop="10dp"/>
+            android:layout_marginTop="10dp"
+            tools:ignore="RelativeOverlap" />
 
         <TextView
             android:id="@+id/take"
@@ -49,6 +51,16 @@
             android:textSize="18sp"
             android:layout_marginBottom="10dp"/>
 
-    </RelativeLayout>
+        <ImageView
+            android:id="@+id/imageDelete"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/delete"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_margin="20dp"
+            android:contentDescription="@string/todo" />
 
+    </RelativeLayout>
 </androidx.cardview.widget.CardView>
+

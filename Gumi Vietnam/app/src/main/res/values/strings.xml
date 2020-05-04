@@ -17,4 +17,8 @@
     <string name="information">Information</string>
     <string name="_4_2020">4/2020</string>
     <string name="time">Time</string>
+    <string name="add_message">Add Message</string>
+    <string name="enter_message">Enter Message</string>
+    <string name="enter_description">Enter Description</string>
+    <string name="cancel">Cancel</string>
 </resources>

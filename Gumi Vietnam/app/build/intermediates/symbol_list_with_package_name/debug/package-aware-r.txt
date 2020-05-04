@@ -1336,7 +1336,9 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable circle_button
 drawable custom_button
+drawable delete
 drawable design_bottom_navigation_item_background
 drawable design_fab_background
 drawable design_ic_visibility
@@ -1360,6 +1362,7 @@ drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable library
 drawable logo
+drawable more
 drawable mtrl_dialog_background
 drawable mtrl_dropdown_arrow
 drawable mtrl_ic_arrow_drop_down
@@ -1382,12 +1385,15 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
-drawable roberto
+drawable plus
+drawable plusminus
+drawable plusss
 drawable roundedcorners
 drawable test_custom_background
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 drawable user
+drawable wall
 id ALT
 id BOTTOM_END
 id BOTTOM_START
@@ -1452,6 +1458,7 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
+id add_btn
 id alertTitle
 id all
 id always
@@ -1461,6 +1468,7 @@ id barrier
 id beginning
 id blocking
 id bottom
+id btn
 id buttonPanel
 id cancel_button
 id center
@@ -1490,6 +1498,7 @@ id date
 id date_picker_actions
 id decor_content_parent
 id default_activity_button
+id des
 id design_bottom_sheet
 id design_menu_item_action_area
 id design_menu_item_action_area_stub
@@ -1532,6 +1541,7 @@ id icon
 id icon_group
 id ifRoom
 id image
+id imageDelete
 id info
 id invisible
 id italic
@@ -1769,6 +1779,7 @@ layout activity_login
 layout activity_main
 layout activity_show_list
 layout activity_splash_screen
+layout add_message_dialog
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -1868,9 +1879,11 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
+string add_message
 string app_name
 string appbar_scrolling_view_behavior
 string bottom_sheet_behavior
+string cancel
 string character_counter_content_description
 string character_counter_overflowed_content_description
 string character_counter_pattern
@@ -1879,6 +1892,8 @@ string clear_text_end_icon_content_description
 string create_account
 string email
 string email_address
+string enter_description
+string enter_message
 string error_icon_content_description
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior

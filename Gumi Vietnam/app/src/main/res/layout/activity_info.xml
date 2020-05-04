@@ -102,8 +102,8 @@
 
         <TextView
             android:id="@+id/textView6"
-            android:layout_width="268dp"
-            android:layout_height="85dp"
+            android:layout_width="239dp"
+            android:layout_height="115dp"
             android:text="@string/info"
             android:textAlignment="textStart"
             app:layout_constraintEnd_toEndOf="parent"
