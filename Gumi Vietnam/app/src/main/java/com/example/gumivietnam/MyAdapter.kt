@@ -5,46 +5,67 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.PopupMenu
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import java.util.*
 
 
 class MyAdapter(
-    private val context: Context,
-    private val model: List<Model>,
-    private val mRandom: Random = Random(),
-    val listener: (Model) -> Unit
+    val context: Context,
+    val items: ArrayList<Model>,
+    private val listener: (Model) -> Unit
 ) :
     RecyclerView.Adapter<MyAdapter.ModelViewHolder>()
 {
 
     class ModelViewHolder(view: View) : RecyclerView.ViewHolder(view)
     {
-        val image = view.findViewById<ImageView>(R.id.red)
-        val title = view.findViewById<TextView>(R.id.company)
-        val descriptor = view.findViewById<TextView>(R.id.take)
-        val delete = view.findViewById<ImageView>(R.id.imageDelete)
-        fun bindView(model: Model, listener: (Model) -> Unit)
+        private val image: ImageView = view.findViewById(R.id.red)
+        private val title: TextView? = view.findViewById(R.id.company)
+        private val descriptor: TextView? = view.findViewById(R.id.take)
+        val buttonViewOption: TextView? = itemView.findViewById(R.id.textViewOptions)
+        fun bindView(items: Model, listener: (Model) -> Unit)
         {
-            image.setImageResource(model.image)
-            title.text = model.title
-            descriptor.text = model.descriptor
-            itemView.setOnClickListener { listener(model) }
-
+            image.setImageResource(items.image)
+            title?.text = items.title
+            descriptor?.text = items.descriptor
+            itemView.setOnClickListener { listener(items) }
+            buttonViewOption?.setOnClickListener{ }
         }
-
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ModelViewHolder =
-        ModelViewHolder(LayoutInflater.from(context).inflate(R.layout.row, parent, false))
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ModelViewHolder
+    {
+        return ModelViewHolder(LayoutInflater.from(context).inflate(R.layout.row, parent, false))
+    }
 
-    override fun getItemCount(): Int = model.size
-
+    override fun getItemCount(): Int {
+        return items.size
+    }
 
     override fun onBindViewHolder(holder: ModelViewHolder, position: Int)
     {
-        holder.bindView(model[position], listener)
+        holder?.bindView(items[position], listener)
+        holder?.buttonViewOption?.setOnClickListener {
+            val popup = PopupMenu(context, holder.buttonViewOption)
+            //inflating menu from xml resource
+            popup.inflate(R.menu.menu_option)
+            //adding click listener
+            popup.setOnMenuItemClickListener { item ->
+                when (item.itemId) {
+                    R.id.delete -> {
+                        items.removeAt(position)
+                        notifyItemRemoved(position)
+                        notifyItemRangeChanged(position,items.size)
+                    }
+                    R.id.edit -> {
 
+                    }
+                }
+                false
+            }
+            //displaying the popup
+            popup.show()
+        }
     }
 }

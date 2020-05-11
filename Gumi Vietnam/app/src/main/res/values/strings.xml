@@ -21,4 +21,7 @@
     <string name="enter_message">Enter Message</string>
     <string name="enter_description">Enter Description</string>
     <string name="cancel">Cancel</string>
+    <string name="_8942">⋮</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
 </resources>

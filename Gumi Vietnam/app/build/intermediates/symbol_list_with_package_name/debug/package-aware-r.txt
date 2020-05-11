@@ -1356,6 +1356,7 @@ drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_menu_arrow_down_black_24dp
 drawable ic_menu_arrow_up_black_24dp
+drawable ic_menu_more
 drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
@@ -1498,6 +1499,7 @@ id date
 id date_picker_actions
 id decor_content_parent
 id default_activity_button
+id delete
 id des
 id design_bottom_sheet
 id design_menu_item_action_area
@@ -1509,6 +1511,7 @@ id dimensions
 id direct
 id disableHome
 id dropdown_menu
+id edit
 id edit_query
 id email
 id end
@@ -1541,7 +1544,6 @@ id icon
 id icon_group
 id ifRoom
 id image
-id imageDelete
 id info
 id invisible
 id italic
@@ -1686,6 +1688,7 @@ id textView4
 id textView5
 id textView6
 id textView7
+id textViewOptions
 id text_input_end_icon
 id text_input_start_icon
 id textinput_counter
@@ -1847,11 +1850,13 @@ layout text_view_with_line_height_from_layout
 layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
+menu menu_option
 mipmap ic_launcher
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description
 string _26
 string _4_2020
+string _8942
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description
@@ -1890,6 +1895,8 @@ string character_counter_pattern
 string chip_text
 string clear_text_end_icon_content_description
 string create_account
+string delete
+string edit
 string email
 string email_address
 string enter_description
