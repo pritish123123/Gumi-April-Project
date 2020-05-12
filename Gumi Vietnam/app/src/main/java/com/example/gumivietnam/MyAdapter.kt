@@ -1,13 +1,18 @@
 package com.example.gumivietnam
 
 import android.content.Context
+import android.text.Editable
+import android.text.InputType
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.PopupMenu
 import android.widget.TextView
+import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.RecyclerView
+import kotlinx.android.synthetic.main.add_message_dialog.view.*
 
 
 class MyAdapter(
@@ -59,7 +64,31 @@ class MyAdapter(
                         notifyItemRangeChanged(position,items.size)
                     }
                     R.id.edit -> {
+                        val mDialogView = LayoutInflater.from(context).inflate(R.layout.add_message_dialog, null)
+                        val mBuilder = AlertDialog.Builder(context)
+                            .setView(mDialogView)
+                            .setTitle("Edit Message")
+                        val mAlertDialog = mBuilder.show()
+                        //
+                        mDialogView?.add?.setText(items[position].title)
+                        mDialogView?.des?.setText(items[position].descriptor)
 
+//                        mDialogView?.add?.hint=items[position].title
+//                        mDialogView?.des?.hint =(items[position].descriptor)
+
+                        mDialogView.cancel_button.setOnClickListener {
+                            mAlertDialog.dismiss()
+                        }
+                        mDialogView.add_btn.setOnClickListener {
+                            mAlertDialog.dismiss()
+                            val message = mDialogView?.add?.text.toString()
+                            val des = mDialogView?.des?.text.toString()
+                            val editItem = items.get(position)
+                            editItem.title = message
+                            editItem.descriptor = des
+                            notifyItemChanged(position)
+                            Toast.makeText( context, " You edit the message", Toast.LENGTH_LONG).show()
+                        }.also { mDialogView.add_btn.text="Save" }
                     }
                 }
                 false

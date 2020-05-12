@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.activity_show_list.*
@@ -38,6 +39,54 @@ class ShowListActivity : AppCompatActivity() {
             intent.putExtra(INTENT_PARCELABLE, it)
             startActivity(intent)
         }
+        // ItemTouchHeloer
+        val itemTouchHelper = ItemTouchHelper(object:ItemTouchHelper.SimpleCallback(0,ItemTouchHelper.LEFT or ItemTouchHelper.RIGHT){
+
+            override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int)
+            {
+                if (direction == ItemTouchHelper. RIGHT){
+                    Models.removeAt(viewHolder.adapterPosition)
+                    (recyclerView.adapter as MyAdapter).notifyItemRemoved(viewHolder.adapterPosition)
+                    Toast.makeText(this@ShowListActivity, " You deleted the message", Toast.LENGTH_LONG).show()
+                } else{
+                    val mDialogView = LayoutInflater.from(this@ShowListActivity).inflate(R.layout.add_message_dialog, null)
+                    val mBuilder = AlertDialog.Builder(this@ShowListActivity)
+                        .setView(mDialogView)
+                        .setTitle("Edit Message")
+                    val mAlertDialog = mBuilder.show()
+                    //
+                    mDialogView?.add?.setText(Models[viewHolder.adapterPosition].title)
+                    mDialogView?.des?.setText(Models[viewHolder.adapterPosition].descriptor)
+
+//                        mDialogView?.add?.hint=items[position].title
+//                        mDialogView?.des?.hint =(items[position].descriptor)
+
+                    mDialogView.cancel_button.setOnClickListener {
+                        mAlertDialog.dismiss()
+                        (recyclerView.adapter as MyAdapter).notifyDataSetChanged()
+                    }
+                    mDialogView.add_btn.setOnClickListener {
+                        mAlertDialog.dismiss()
+                        val message = mDialogView?.add?.text.toString()
+                        val des = mDialogView?.des?.text.toString()
+                        val editItem = Models.get(viewHolder.adapterPosition)
+                        editItem.title = message
+                        editItem.descriptor = des
+                        (recyclerView.adapter as MyAdapter).notifyItemChanged(viewHolder.adapterPosition)
+                        Toast.makeText( this@ShowListActivity, " You edit the message", Toast.LENGTH_LONG).show()
+                    }.also { mDialogView.add_btn.text="Save" }
+                }
+
+            }
+            override fun onMove(
+                recyclerView: RecyclerView,
+                viewHolder: RecyclerView.ViewHolder,
+                target: RecyclerView.ViewHolder
+            ): Boolean
+            {
+                return false
+            }
+        }).attachToRecyclerView(recyclerView)
 
         btn.setOnClickListener {
             val mDialogView = LayoutInflater.from(this).inflate(R.layout.add_message_dialog, null)
@@ -58,6 +107,7 @@ class ShowListActivity : AppCompatActivity() {
             }
         }
     }
+
     private fun addModel()
     {
         Models.add(Model("Notification From Company", "Take a day off", R.drawable.email))
@@ -75,19 +125,6 @@ class ShowListActivity : AppCompatActivity() {
         Models.add(Model("Notification From Company", "Take a day off", R.drawable.email))
     }
 
-//    override fun editItem(context: Context, Model: Int){
-//        val intent = Intent(this@ShowListActivity, EditActivity::class.java )
-//        intent.putExtra(INTENT_PARCELABLE,true)
-//
-//    }
-
-//    override fun editItem(person: Person, index: Int) {
-//        val intent = Intent(this@MainActivity, EditActivity::class.java)
-//        intent.putExtra(PERSON_INTENT_EDIT, true)
-//        intent.putExtra(PERSON_INTENT_OBJECT, person)
-//        intent.putExtra(PERSON_INTENT_INDEX, index)
-//        startActivityForResult(intent, REQUEST_CODE)
-//    }
 }
 
 
